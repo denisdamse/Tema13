@@ -2,7 +2,7 @@ import java.util.TreeMap;
 
 public class TreeMapExercise {
     public static void main(String[] args) {
-        String[] strings ={"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy","dog"};
+        String[] strings ={"the", "quick", "the", "fox", "the", "over", "the", "lazy","dog"};
         System.out.println(TreeMapExercise.countWords(strings));
     }
     public static TreeMap<String, Integer> countWords(String[] words)
@@ -13,6 +13,7 @@ public class TreeMapExercise {
         {
            if(map.containsKey(s))
            {
+                i=map.get(s);
                 i++;
                 map.put(s,i);
            }
