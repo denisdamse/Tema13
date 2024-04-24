@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class HashSetExercise {
     public static void main(String[] args){
         if(HashSetExercise.containsAllVowels("the quick brown fox jumps over the lazy dog"))
@@ -7,10 +9,18 @@ public class HashSetExercise {
         else System.out.println("NU");
     }
     public static boolean containsAllVowels(String str) {
-        if(str.contains("a") && str.contains("e") && str.contains("i") && str.contains("o") && str.contains("u"))
+        boolean contains=true;
+        HashSet<String> vowelSet = new HashSet<String>();
+        vowelSet.add("a");
+        vowelSet.add("e");
+        vowelSet.add("i");
+        vowelSet.add("o");
+        vowelSet.add("u");
+        for(String vowel:vowelSet)
         {
-            return true;
+            if(!str.contains(vowel))
+            contains=false;
         }
-        else return false;
+        return contains;
     }
 }

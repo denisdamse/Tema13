@@ -4,6 +4,7 @@ public class TreeMapExercise {
     public static void main(String[] args) {
         String[] strings ={"the", "quick", "the", "fox", "the", "over", "the", "lazy","dog"};
         System.out.println(TreeMapExercise.countWords(strings));
+        
     }
     public static TreeMap<String, Integer> countWords(String[] words)
     {
@@ -23,5 +24,7 @@ public class TreeMapExercise {
            i=1;
         }
         return map;
+
     }
+    
 }
